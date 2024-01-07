@@ -1,0 +1,8 @@
+few_shots = {
+    "Get the number of games Giannis played in 2015": "SELECT COUNT(pgl.game_id) AS num_games FROM player_game_log pgl JOIN player p ON pgl.player_id = p.player_id WHERE p.player_name = 'Giannis Antetokounmpo' AND pgl.season_id = 2015 GROUP BY pgl.player_id;",
+    "Get Lebron James' points per game average in the 2023 season": "SELECT pts/gp AS points_per_game FROM player_season JOIN player ON player_season.player_id = player.player_id WHERE player.player_name = 'LeBron James' AND season_id = 2023;",
+    "How triple doubles did Jokic have in 2022?": "SELECT COUNT(td3) FROM player_game_log JOIN player ON player_game_log.player_id = player.player_id WHERE player.player_name = 'Nikola Jokic' AND season_id = 2022 AND td3 > 0;",
+    "What was Curry's shooting percentage in 2020?": "SELECT 100 * SUM(pgl.fgm) / SUM(pgl.fga) AS shooting_percentage FROM player_game_log pgl JOIN player p ON pgl.player_id = p.player_id WHERE p.player_name = 'Stephen Curry' AND pgl.season_id = 2020;",
+    "What was Curry's three point percentage in 2021?": "SELECT TRUNC(AVG(fg3_pct)::numeric, 3) AS three_point_percentage FROM player_game_log JOIN player ON player_game_log.player_id = player.player_id JOIN player_season ON player_game_log.player_id = player_season.player_id WHERE player.player_name = 'Stephen Curry' AND player_season.season_id = 2021 GROUP BY player_season.season_id, player.player_name;",
+    "How many players from the college Duke are in the NBA?": "SELECT COUNT(DISTINCT ps.player_id) FROM player_season ps JOIN player p ON ps.player_id = p.player_id WHERE p.college = 'Duke' AND ps.season_id = 2023;"
+}
