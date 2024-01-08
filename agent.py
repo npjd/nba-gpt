@@ -54,5 +54,5 @@ agent_executor = create_sql_agent(
 )
 
 agent_executor.invoke(
-    {"input": "What is Lebrons worst game in the NBA?", "chat_history": []}
+    {"input": "What is Lamelo Balls best game in 2023?", "chat_history": []}
 )
