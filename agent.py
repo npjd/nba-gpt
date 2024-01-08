@@ -14,7 +14,7 @@ load_dotenv()
 
 db = SQLDatabase.from_uri("postgresql://nba_sql:nba_sql@localhost:5432/nba")
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+llm = ChatOpenAI(model_name="gpt-4", temperature=0)
 embeddings = OpenAIEmbeddings()
 
 few_shot_docs = [
@@ -54,5 +54,5 @@ agent_executor = create_sql_agent(
 )
 
 agent_executor.invoke(
-    {"input": "Give me the database schema?", "chat_history": []}
+    {"input": "What is Lebrons worst game in the NBA?", "chat_history": []}
 )
