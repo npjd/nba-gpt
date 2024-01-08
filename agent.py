@@ -54,5 +54,5 @@ agent_executor = create_sql_agent(
 )
 
 agent_executor.invoke(
-    {"input": "How many players are from the college called Alabama?", "chat_history": []}
+    {"input": "Give me the database schema?", "chat_history": []}
 )
