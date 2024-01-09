@@ -50,7 +50,7 @@ class Agent:
             verbose=verbose,
             agent_type=AgentType.OPENAI_FUNCTIONS,
             extra_tools=self.custom_tool_list,
-            suffix=self.custom_suffix,
+            suffix=custom_suffix,
         )
         
 
