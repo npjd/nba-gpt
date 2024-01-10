@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./nba.sql:/docker-entrypoint-initdb.d/nba.sql
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+  web:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - DATABASE_URI=postgresql://user:password@db/database
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - db

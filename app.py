@@ -2,7 +2,7 @@ import streamlit as st
 from agent import Agent
 
 
-agent = Agent(verbose=False)
+agent = Agent(verbose=True)
 
 st.write("""
 # NBA-GPT
