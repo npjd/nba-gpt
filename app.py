@@ -18,6 +18,6 @@ input = st.text_input("Ask a question about the NBA", key="input")
 
 if input:
     output = agent.invoke(input)
-    youtube_link = search.invoke(output)
+    youtube_link = search.invoke(output["output"])
     st.write(output)
     st.video(youtube_link)
