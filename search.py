@@ -40,12 +40,3 @@ class Search:
             + agent_output
             + "\n\n"
         )
-
-
-# answer = "Jimmy Butler's best game against the Celtics in 2021 was on March 30, 2022. He was playing for the Heat. In that game, he scored 24 points, had 3 rebounds, and 2 assists."
-
-
-# # agent_input = llm.invoke(prompt)
-# # agent_input = agent_input.replace('"', "")
-
-# print("YOUTUBE QUERY", agent_input)

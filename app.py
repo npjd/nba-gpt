@@ -1,8 +1,10 @@
 import streamlit as st
 from agent import NBAAgent
+from search import Search
 
 
 agent = NBAAgent(verbose=True)
+search = Search()
 
 st.write("""
 # NBA-GPT
@@ -15,4 +17,7 @@ st.write("No awards or all-star games as well")
 input = st.text_input("Ask a question about the NBA", key="input")
 
 if input:
-    st.write(agent.invoke(input))
+    output = agent.invoke(input)
+    youtube_link = search.invoke(output)
+    st.write(output)
+    st.video(youtube_link)
