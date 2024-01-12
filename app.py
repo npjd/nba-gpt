@@ -1,8 +1,8 @@
 import streamlit as st
-from agent import Agent
+from agent import NBAAgent
 
 
-agent = Agent(verbose=True)
+agent = NBAAgent(verbose=True)
 
 st.write("""
 # NBA-GPT
@@ -16,5 +16,3 @@ input = st.text_input("Ask a question about the NBA", key="input")
 
 if input:
     st.write(agent.invoke(input))
-
-    

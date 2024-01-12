@@ -26,7 +26,7 @@ Then I should query the schema of the most relevant tables.
 """
 
 
-class Agent:
+class NBAAgent:
     def __init__(self, verbose=True, open_ai_model="gpt-4") -> None:
         self.db = SQLDatabase.from_uri(os.getenv("DATABASE_URI"))
         self.llm = ChatOpenAI(model_name=open_ai_model, temperature=0)

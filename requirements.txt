@@ -8,3 +8,4 @@ streamlit==1.29.0
 psycopg2==2.9.9
 psycopg2-binary==2.9.9
 faiss-cpu==1.7.3
+youtube-search==2.1.2
