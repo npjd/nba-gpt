@@ -24,15 +24,15 @@
  - Serper API Key  
  
  ### Installation
- 
- 1. Create a `.env` file with the following config
+ 1. Clone the repo `git clone https://github.com/npjd/nba-gpt`
+ 2. Create a `.env` file with the following config
 ```dosini
 OPENAI_API_KEY="<insert api key>"
 DATABASE_URI="postgresql://nba_sql:nba_sql@localhost:5432/nba"
 SERPER_API_KEY="<insert api key>"
 ```
- 2. Run `docker-compose up`
- 3. Visit http://localhost:8501/ once build is finished
+ 3. Run `docker-compose up`
+ 4. Visit http://localhost:8501/ once build is finished
 
  
  ## Usage
